@@ -1,0 +1,14 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [ "BVPN9UFA9B.com.Looke.UniversalLinks"],
+                "components": [
+                    {
+                        "/": "/link"
+                    }
+                ]
+            }
+        ]
+    }
+}

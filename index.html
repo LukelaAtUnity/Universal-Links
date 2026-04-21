@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Links</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f7;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <h1>Universal Links</h1>
+</body>
+</html>
+
+
+/* apple-app-site-association (NO extension, served as application/json) */
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.your.bundleid",
+        "paths": ["*"]
+      }
+    ]
+  }
+}
+
+/* Instructions:
+1. Host index.html at your domain (HTTPS required).
+2. Place the apple-app-site-association file at:
+   https://yourdomain.com/.well-known/apple-app-site-association
+   OR
+   https://yourdomain.com/apple-app-site-association
+3. Serve it with Content-Type: application/json (no .json extension).
+4. Replace TEAMID and bundle ID with your actual Apple Developer values.
+5. Enable Associated Domains in Xcode:
+   applinks:yourdomain.com
+*/
